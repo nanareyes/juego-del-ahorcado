@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="./css/reset.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section id="logo">
+      <div>
+        <img src="./assets/logo.png" alt="Alura-Logo">
+      </div>
+    </section>
+    <section id="start-game">
+      <div class="img-start-game"></div>
+      <div class="btn-start-game-container">
+        <button id="btn-play-game" class="btn">Iniciar juego</button>
+        <button id="btn-add-words-game" class="btn">Agregar una nueva palabra</button>
+      </div>
+    </section>
+    <section id="add-new-words">
+      <div id="add-word">
+        <textarea name="new-word" id="text-new-word" cols="40" rows="10" placeholder="Ingrese una palabra"></textarea>
+      </div>
+      <div id="add-container">
+        <div class="add-warning"><span class="span-add-word">⌽</span><p>Máximo 8 letras</p></div>
+        <div id="btn-add-container">
+          <button id="btn-save-new-word" class="btn btn-left">Guardar y empezar</button>
+          <button id="btn-cancel-add-word" class="btn btn-right">Cancelar</button>
+        </div>
+      </div>
+    </section>
+    <section id="hangman-game">
+      <div id="draw-hangman">aquí va el dibujo</div>
+      <div id="secret-word-container">
+        <div id="secret-word"> aquí va la palabra</div>
+        <div id="wrongs-letters"> aquí van las letras equivocadas</div>
+      </div>
+      <div id="btn-game-container">
+        <button id="btn-new-game" class="btn btn-left">Nuevo juego</button>
+        <button id="btn-return" class="btn btn-right">Desistir</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

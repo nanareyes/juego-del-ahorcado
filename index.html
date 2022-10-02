@@ -1,53 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego del Ahorcado</title>
-  <link rel="stylesheet" href="./css/reset.css"/>
-  <link rel="stylesheet" href="./css/style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <section id="logo">
-      <div>
-        <img src="./assets/logo.png" alt="Alura-Logo">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="viewport" content="width-device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Game del Ahorcado</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+  </head>
+  <body>
+    <img src="/assets/Logo.png" class="logo" alt="logo-de alura" />
+    <div id="div-hide" class="btn-home">
+      <a href="#gallow">
+        <input class="btn-start" type="submit" value="Jugar" id="start-game" />
+      </a>
+      <button class="btn-word" id="new-word" onclick="showScreenToAddWord()">
+        Agregar palabra
+      </button>
+    </div>
+
+    <div id="add-word" class="word-new">
+      <input
+        class="text-input"
+        type="text"
+        id="input-new-word"
+        maxlength="8"
+        placeholder="Escriba una palabra"
+      />
+
+      <div class="form-group">
+        <img src="/assets/!.png" />
+        <label for="input-texto">Max. 8 caracteres</label>
       </div>
-    </section>
-    <section id="start-game">
-      <div class="img-start-game"></div>
-      <div class="btn-start-game-container">
-        <button id="btn-play-game" class="btn">Iniciar juego</button>
-        <button id="btn-add-words-game" class="btn">Agregar una nueva palabra</button>
+
+      <div class="btn-div">
+        <input
+          class="btn-blue"
+          type="submit"
+          value="Guardar y empezar"
+          id="btn-save"
+        />
+        <input
+          class="btn-white"
+          type="submit"
+          value="Cancelar"
+          id="btn-cancel"
+        />
       </div>
-    </section>
-    <section id="add-new-words">
-      <div id="add-word">
-        <textarea name="new-word" id="text-new-word" cols="40" rows="10" placeholder="Ingrese una palabra"></textarea>
+    </div>
+
+    <div id="div-hangman" class="canvas">
+      <canvas id="gallow" height="660" width="1200"></canvas>
+      <div class="underlined"></div>
+
+      <div class="btn-div-canvas">
+        <input
+          class="btn-blue"
+          type="submit"
+          value="Nuevo Game"
+          id="btn-new-game"
+        />
+        <input class="btn-white" type="submit" value="Salir" id="btn-logout" />
       </div>
-      <div id="add-container">
-        <div class="add-warning"><span class="span-add-word">⌽</span><p>Máximo 8 letras</p></div>
-        <div id="btn-add-container">
-          <button id="btn-save-new-word" class="btn btn-left">Guardar y empezar</button>
-          <button id="btn-cancel-add-word" class="btn btn-right">Cancelar</button>
-        </div>
-      </div>
-    </section>
-    <section id="hangman-game">
-      <div id="draw-hangman">aquí va el dibujo</div>
-      <div id="secret-word-container">
-        <div id="secret-word"> aquí va la palabra</div>
-        <div id="wrongs-letters"> aquí van las letras equivocadas</div>
-      </div>
-      <div id="btn-game-container">
-        <button id="btn-new-game" class="btn btn-left">Nuevo juego</button>
-        <button id="btn-return" class="btn btn-right">Desistir</button>
-      </div>
-    </section>
-  </main>
-</body>
+    </div>
+    <script src="hangman.js"></script>
+    <script src="canvas.js"></script>
+  </body>
 </html>

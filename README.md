@@ -1,14 +1,7 @@
 # Juego del Ahorcado
 ## Descripción
 
-Este proyecto consiste adivinar una palabra antes de que se complete la imagen a los **5 intentos**. Las líneas indicarán la cantidad de letras que tiene la palabra seleccionada aleatoriamente, además, no será posible ingresar números o caracteres especiales. ¡Que comience el juego! 
-
-<p align="center">
-<img
-  src="img/5.png"
-  width="250"
-  height="250">
-</p>
+Este proyecto consiste adivinar una palabra antes de que se complete la imagen del ahorcado. Las líneas indicarán la cantidad de letras que tiene la palabra seleccionada aleatoriamente, además, no será posible ingresar números o caracteres especiales. 
 
 ## Herramientas Usadas
 
